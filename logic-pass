@@ -1,0 +1,32 @@
+#Q1/remove a character from a string in Python:string.replace(old character, new character, count)
+
+s = "flexible!"
+s2 = s.replace("b","p")
+
+print(s2)
+
+
+#Q2/Write a program to find all prime numbers up to a given range of numbers?
+#Read user input
+min = int(input("Enter the min : "))
+max = int(input("Enter the max : "))
+
+for n in range(min,max + 1):
+   if n > 1:
+       for i in range(2,n):
+           if (n % i) == 0:
+               break
+       else:
+           print(n)
+           
+#Q3/write a function that count how many the given character repeated in a given string?
+
+import collections
+str1 = 'thequickbrownfoxjumpsoverthelazydog'
+d = collections.defaultdict(int)
+for c in str1:
+    d[c] += 1
+
+for c in sorted(d, key=d.get, reverse=True):
+  if d[c] > 1:
+      print('%s %d' % (c, d[c]))
